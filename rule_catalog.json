@@ -56,6 +56,11 @@
       "title": "The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type",
       "description": "Strong typing requires the controlling expression on an if statement or iteration statement to have essentially Boolean type",
       "severity": "Mandatory"
+    },
+    "15.5": {
+      "title": "A function should have a single point of exit at the end",
+      "description": "This rule requires that a return statement must occur as the last statement in the function body. Otherwise, the following issues can occur:\n\n• Code following a return statement can be unintentionally omitted.\n• If a function that modifies some of its arguments has early return statements, when reading the code, it is not immediately clear which modifications actually occur.",
+      "severity": "Mandatory"
     }
   }
 }
