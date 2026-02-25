@@ -2,65 +2,10 @@
   "version": 1,
   "edition": "MISRA-C:2012",
   "rules": {
-    "8.2": {
-      "title": "Function types shall be in prototype form with named parameters",
-      "description": "The rule requires that you specify names and data types for all the parameters in a declaration. The parameter names provide useful information regarding the function interface. A mismatch between a declaration and definition can indicate a programming error. For instance, you mixed up parameters when defining the function. By insisting on parameter names, the rule allows a code reviewer to detect this mismatch.",
-      "severity": "Required"
-    },
-    "17.7": {
-      "title": "The value returned by a function having non-void return type shall be used",
-      "description": "The rule aims to ensure that the return values from functions are not ignored, as they often contain important information about the success or failure of an operation. Ignoring these values can lead to bugs and unpredictable behavior in safety-critical systems.",
-      "severity": "Required"
-    },
-    "17.3": {
-      "title": "A function shall not be implicitly declared",
-      "description": "All functions must be declared before they are called to ensure type safety and prevent unexpected behavior.",
-      "severity": "Required"
-    },
-    "20.9": {
-      "title": "All identifiers used in the controlling expression of #if or #elif preprocessing directives must be defined before evaluation",
-      "description": "This rule ensures that identifiers are properly defined to avoid undefined behavior, which can lead to unexpected results in code execution. If an identifier is not defined, the preprocessor assumes it has a value of zero, which may not meet developer expectations.",
-      "severity": "Required"
-    },
-    "8.4": {
-      "title": "A compatible declaration shall be visible when an object or function with external linkage is defined.",
-      "description": "The rule mandates that any object or function with external linkage must have a compatible declaration visible at the point of definition. This helps prevent issues such as type mismatches and ensures that the compiler can verify the compatibility of declarations and definitions.",
-      "severity": "Mandatory"
-    },
-    "15.7": {
-      "title": "All if … else if constructs shall be terminated with an else statement",
-      "description": "Unless there is a terminating else statement in an if...elseif...else construct, during code review, it is difficult to tell if you considered all possible results for the if condition.",
-      "severity": "Required"
-    },
-    "10.4": {
-      "title": "Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category",
-      "description": "The use of implicit conversions between types can lead to unintended results, including possible loss of value, sign, or precision.",
-      "severity": "Mandatory"
-    },
-    "2.7": {
-      "title": "A function should not contain unused parameters",
-      "description": "If a parameter is unused, it is possible that the implementation of the function does not match its specifications. This rule can highlight such mismatches.",
-      "severity": "Advisory"
-    },
-    "21.1": {
-      "title": "#define and #undef shall not be used on a reserved identifier or reserved macro name",
-      "description": "Reserved identifiers and reserved macro names are intended for use by the implementation. Removing or changing the meaning of a reserved macro can result in undefined behavior. This rule applies to the following:\n\n\n• Identifiers or macro names beginning with an underscore\n\n• Identifiers in file scope described in the C Standard Library\n\n• Macro names described in the C Standard Library as being defined in a standard header",
-      "severity": "Mandatory"
-    },
-    "13.4": {
-      "title": "The result of an assignment operator should not be used",
-      "description": "The rule is violated if the following happens in the same expression:\n\n• The assignment operator acts on a variable.\n\n• Another read or operation is performed on the result of the assignment.",
-      "severity": "Mandatory"
-    },
-    "14.4": {
-      "title": "The controlling expression of an if statement and the controlling expression of an iteration-statement shall have essentially Boolean type",
-      "description": "Strong typing requires the controlling expression on an if statement or iteration statement to have essentially Boolean type",
-      "severity": "Mandatory"
-    },
-    "15.5": {
-      "title": "A function should have a single point of exit at the end",
-      "description": "This rule requires that a return statement must occur as the last statement in the function body. Otherwise, the following issues can occur:\n\n• Code following a return statement can be unintentionally omitted.\n• If a function that modifies some of its arguments has early return statements, when reading the code, it is not immediately clear which modifications actually occur.",
-      "severity": "Mandatory"
+    "16.1": {
+      "title": "All switch statements shall be well-formed",
+      "description": "The syntax for switch statements in C is not particularly rigorous and can allow complex, unstructured behavior. This rule and other rules impose a simple consistent structure on the switch statement.",
+      "severity": ""
     }
   }
 }
