@@ -61,6 +61,11 @@
       "title": "A function should have a single point of exit at the end",
       "description": "This rule requires that a return statement must occur as the last statement in the function body. Otherwise, the following issues can occur:\n\n• Code following a return statement can be unintentionally omitted.\n• If a function that modifies some of its arguments has early return statements, when reading the code, it is not immediately clear which modifications actually occur.",
       "severity": "Mandatory"
+    },
+    "16.1": {
+      "title": "All switch statements shall be well-formed",
+      "description": "The syntax for switch statements in C is not particularly rigorous and can allow complex, unstructured behavior. This rule and other rules impose a simple consistent structure on the switch statement.",
+      "severity": "Required"
     }
   }
 }
